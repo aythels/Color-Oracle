@@ -1,6 +1,8 @@
 /* Puppeteer Scraping */
 
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-extra')
+const StealthPlugin = require('puppeteer-extra-plugin-stealth')
+puppeteer.use(StealthPlugin())
 
 async function getProfileImage(username){
   /* https://devdocs.io/puppeteer/index#pageevaluatepagefunction-args */
