@@ -87,6 +87,16 @@ function wordBlacklisted(word) {
         "purple",
         "brown",
         "pink",
+        "lfrc",
+        "tg",
+        "mr",
+        "coral",
+        "beige",
+        "grey",
+        "gray",
+        "rc",
+        "ntersee",
+        "lilac",
     ];
 
     if (blacklist.includes(word)) return true;

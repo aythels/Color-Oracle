@@ -93,7 +93,7 @@ async function processImage(url, username) {
 		} else if (username === "maria_yablonina") {
 			words[0] = "compassionate";
 			words[1] = "softhearted";
-			words[2] = "will give us As!!!11!!";
+			words[2] = "will give us an A+";
 		}
 
 	  appendImage(img, words, allPalettes);
