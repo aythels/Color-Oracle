@@ -121,6 +121,12 @@ function predict(colorArray, tolerance=0) {
 
     if (available.length < 10) return predict(colorArray, tolerance+1);
     console.log(available);
+    console.log(`
+        All words: ${12913},
+        Words in range: ${Object.keys(rNames).length + Object.keys(gNames).length + Object.keys(bNames).length},
+        Words cross referenced: ${available.length},
+        Final words chosen: 3,
+    `)
 
     return available;
 }
