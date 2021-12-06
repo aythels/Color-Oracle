@@ -15,7 +15,7 @@ async function getProfileImage(username){
   
           const text = await response.text();
   
-          await browser.close()
+          await browser.close();
           resolve(text);
       } catch (error) {
           reject(error);
