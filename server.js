@@ -24,9 +24,14 @@ app.get('/api/profile/:id', (req, res) => {
 
     getProfileImage(username)
     .then((data) => {
-        data = JSON.parse(data);
-        console.log(data.profile_pic_url);
-        res.send({username: username, url: data.profile_pic_url});
+        try {
+            const obj = JSON.parse(data);
+            res.send({username: username, url: obj.profile_pic_url});            
+        } catch (e) {
+            console.log(e, data);
+            res.status(400).send('Bad request');
+        }
+
     }).catch((error) => {
         console.log(error);
         res.status(400).send('Bad request');
