@@ -120,6 +120,7 @@ function predict(colorArray, tolerance=0) {
 
 
     if (available.length < 10) return predict(colorArray, tolerance+1);
+    console.log(available);
 
     return available;
 }

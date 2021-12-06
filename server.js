@@ -26,73 +26,18 @@ app.get('/api/profile/:id', (req, res) => {
     .then((data) => {
         try {
             const obj = JSON.parse(data);
-            res.send({username: username, url: obj.profile_pic_url});            
-        } catch (e) {
-            console.log(e, data);
-            res.status(400).send('Bad request');
+            if (obj.profile_pic_url)  res.send({username: username, url: obj.profile_pic_url});      
+            else res.status(400).send("Invalid username?"); 
+        } catch (error) {
+            console.log(error, data);
+            res.status(400).send(error);
         }
 
     }).catch((error) => {
         console.log(error);
-        res.status(400).send('Bad request');
+        res.status(400).send(error);
     });
-
-    /*
-    getProfileImage(username)
-        .then(data => {
-            res.send({username: username, url: data});
-            console.log(data, "this is some text");
-        })
-        .catch(error => {
-            console.log(error);
-            res.status(400).send('Bad request');
-        });*/
-
     
-});
-
-app.get('/api/images/:id', (req, res) => {
-    const username = req.params.id;
-
-    /*
-    if (username.length < 2 || username.length > 30) res.status(400).send('Bad request');
-
-    getImages(username)
-        .then(data => {
-            console.log(username);
-            res.send(data);
-        })
-        .catch(error => {
-            console.log(error);
-            res.status(400).send('Bad request');
-        });*/
-    res.status(400).send('Bad request');
-});
-
-app.post('/api', (req, res) => {
-    console.log(req.body);
-
-    /*
-
-    const tolArray = req.body.tolArray;
-    const colorArray = req.body.colorArray;
-
-    const regexTol = new RegExp(/^([0-9]|10)$/);
-
-    const regex = new RegExp(/^([0-9]|[1-9][0-9]|[1-3][0-5][0-9]|360)$/);
-    const regex2 = new RegExp(/^([0-9]|[1-9][0-9]|100)$/);
-
-    if (!regexTol.test(tolArray[0])) res.status(400).send('Bad request');
-    if (!regexTol.test(tolArray[1])) res.status(400).send('Bad request');
-    if (!regexTol.test(tolArray[2])) res.status(400).send('Bad request');
-    if (!regex.test(colorArray[0])) res.status(400).send('Bad request');
-    if (!regex2.test(colorArray[1])) res.status(400).send('Bad request');
-    if (!regex2.test(colorArray[2])) res.status(400).send('Bad request');
-
-    console.log("getting colors");
-	res.send($filter(tolArray, colorArray));*/
-
-    res.status(400).send('Bad request');
 });
 
 //---------------------------------------------------------------ROUTES

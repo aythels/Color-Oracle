@@ -6,6 +6,25 @@ body {
     margin: 0px;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+.image-container {
+    float: right;
+    height: 100vh;
+    width: 100vh;
+    user-select: none;
+}
+
+.image-src {
+    height: 100%;
+    width: 100%;
+}
+
+.ui-wrapper {
+    width: 100vh;
+    position: absolute;
+    top: 10%;
 }
 
 .heading {
@@ -30,6 +49,7 @@ body {
 }
 
 #progress-bar-visiblity {
+    position: absolute;
     opacity: 0;
 }
 
@@ -37,10 +57,38 @@ body {
     margin: 0px !important;
 }
 
+.dot {
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.palette-text {
+    margin-top: 10px;
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    margin-left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.data-container {
+    opacity: 0;
+    width: auto;
+}
+
 #title {
+    position: absolute;
     opacity: 0;
     color: tomato;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    margin-left: 4%;
+    bottom: 0;
+    margin: 1%;
 }
