@@ -25,4 +25,4 @@ async function getProfileImage(username){
 
 
 
-module.exports = { getImages, getProfileImage };
+module.exports = { getProfileImage };

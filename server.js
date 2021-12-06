@@ -1,4 +1,4 @@
-const { getImages, getProfileImage } = require('./scraper.js');
+const { getProfileImage } = require('./scraper.js');
 
 const cors = require('cors');
 
@@ -22,7 +22,7 @@ app.get('/api/profile/:id', (req, res) => {
 
     console.log("sending request");
 
-    getProfileImage2(username)
+    getProfileImage(username)
     .then((data) => {
         data = JSON.parse(data);
         console.log(data.profile_pic_url);
@@ -49,6 +49,7 @@ app.get('/api/profile/:id', (req, res) => {
 app.get('/api/images/:id', (req, res) => {
     const username = req.params.id;
 
+    /*
     if (username.length < 2 || username.length > 30) res.status(400).send('Bad request');
 
     getImages(username)
@@ -59,7 +60,8 @@ app.get('/api/images/:id', (req, res) => {
         .catch(error => {
             console.log(error);
             res.status(400).send('Bad request');
-        });
+        });*/
+    res.status(400).send('Bad request');
 });
 
 app.post('/api', (req, res) => {
