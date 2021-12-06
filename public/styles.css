@@ -1,0 +1,46 @@
+body {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #333333;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.heading {
+    margin-top: 4%;
+    margin-bottom: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 70px;
+    text-align: center;
+    color: white;
+    user-select: none;
+}
+
+.heading-body {
+    height: auto;
+    width: 400px;
+    margin: auto;
+}
+
+.img_grid {
+    width: 100%;
+}
+
+#progress-bar-visiblity {
+    opacity: 0;
+}
+
+.progress-bar {
+    margin: 0px !important;
+}
+
+#title {
+    opacity: 0;
+    color: tomato;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-left: 4%;
+}
