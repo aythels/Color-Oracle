@@ -80,7 +80,7 @@ async function processImage(url, username) {
 			words.push(choosen);
 		});
 
-
+/*
 		if (username === "omar_ismail._") {
 			words[0] = "incredible";
 			words[1] = "genius";
@@ -94,7 +94,7 @@ async function processImage(url, username) {
 			words[0] = "compassionate";
 			words[1] = "softhearted";
 			words[2] = "will give us an A+";
-		}
+		}*/
 
 	  appendImage(img, words, allPalettes);
 
