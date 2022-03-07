@@ -2,6 +2,8 @@
 
 A (satirical) web application that attempts to characterize a person using adjectives based on the colors found in their Instagram profile picture.
 
+![Untitled-2](https://user-images.githubusercontent.com/10892740/156983011-b88f6cbd-30b5-423f-937c-4c200d6ce607.png)
+
 ## Background
 
 The aim of our project was to create a tool utilizing a data driven approach to create social perceptions based on Instagram profiles as a way of exposing key biases in the use and misuse of data sets. We do this by associating prominent colors found in one's Instagram profile picture to three supposedly hyper-personalized traits. Color associations are used to create broader assumptions about a person under the pretense of computational data analysis. This project was inspired by the numerous AI generators that seem to suggest that data based processes are always trusted. We therefore hope to reveal the fallacies in believing that data is always factual, reliable, and impartial.
