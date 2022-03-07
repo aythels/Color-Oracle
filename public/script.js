@@ -80,22 +80,6 @@ async function processImage(url, username) {
 			words.push(choosen);
 		});
 
-/*
-		if (username === "omar_ismail._") {
-			words[0] = "incredible";
-			words[1] = "genius";
-			words[2] = "charming";
-	
-		} else if (username === "omarabdellatif05") {
-			words[0] = "fun";
-			words[1] = "hardworking";
-			words[2] = "buff";
-		} else if (username === "maria_yablonina") {
-			words[0] = "compassionate";
-			words[1] = "softhearted";
-			words[2] = "will give us an A+";
-		}*/
-
 	  appendImage(img, words, allPalettes);
 
     });
@@ -136,84 +120,3 @@ const appendImage = function (element, words, palette) {
 	const cd = document.getElementById("dot3");
 	cd.style.backgroundColor = `rgb(${palette[2][0]}, ${palette[2][1]}, ${palette[2][2]})`;
 }
-
-/*
-async function processImages(urlArray) {
-  const allImages = [];
-
-  for await (let url of urlArray) {      
-    const imageUrl = url;
-    const proxyUrl = `https://api.allorigins.win/raw?url=`;
-
-    const response = await fetch(`${proxyUrl}${encodeURIComponent(imageUrl)}`);
-    if(!response.ok) throw new Error('Network response was not ok.');
-
-    const img = new Image();
-    img.crossOrigin = 'Anonymous';
-    img.src = response.url;
-
-    allImages.push(img);
-  };
-
-  return allImages;
-
-}
-
-function appendImages(array, text) {
-  const grid = document.getElementById("img_grid");
-  grid.innerHTML = '';
-
-  // Creating row
-  let rowElement = document.createElement("div");
-  rowElement.className = "row";
-  
-  let counter = 0;
-  array.forEach((image, index) => {
-    // Inner
-    const cardImage = document.createElement("div");
-    cardImage.className = "card-image";
-    cardImage.appendChild(image);
-
-    const cardContent = document.createElement("div");
-    cardContent.className = "card-content center-align";
-    cardContent.innerHTML = `<p>${text[index].toString()}</p>`;
-
-    const card = document.createElement("div");
-    card.className = "card";
-    card.appendChild(cardImage);
-    card.appendChild(cardContent);
-
-    const column = document.createElement("div");
-    column.className = "col s3";
-    column.appendChild(card);
-
-    // Appending entry to row
-    rowElement.appendChild(column);
-    counter += 1;
-
-    // Appending row to grid
-    if (counter === 4) {
-      grid.append(rowElement);
-
-      rowElement = document.createElement("div");
-      rowElement.className = "row";
-
-      counter = 0;
-    }
-
-  });
-
-  if (counter !== 0) grid.append(rowElement);
-}*/
-
-/*
-processImageTest(
-  ["https://picsum.photos/200", 
-  "https://picsum.photos/200", 
-  "https://picsum.photos/200", 
-  "https://picsum.photos/200", 
-  "https://picsum.photos/200"])
-  .then((imageArray) => appendImages(imageArray));
-*/
-
-//appendImage(["https://picsum.photos/200", "https://picsum.photos/200", "https://picsum.photos/200", "https://picsum.photos/200", "https://picsum.photos/200"]);

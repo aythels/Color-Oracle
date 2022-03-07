@@ -7,7 +7,7 @@ puppeteer.use(StealthPlugin())
 async function getProfileImage(username){
   /* https://devdocs.io/puppeteer/index#pageevaluatepagefunction-args */
 
-  const url = `https://izoomyou.app/api/v1/resources/user/${username}`;
+  const url = `https://izoomyou.net/api/v1/resources/user/${username}`;
 
   return new Promise(async(resolve, reject) =>{
       try {
