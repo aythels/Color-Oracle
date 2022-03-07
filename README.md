@@ -15,7 +15,7 @@ Website ColourLover's API was first used to obtain over 30,000 data entries in t
 
 Indiscernible characters within the titles were removed and phrases were separated into individual words and categorized by type (noun, verb, and adjective), resulting in a data set over 10,000 entries long.
 
-Upon inputting the name of a Instagram user on the webpage, a call is made to the server to request the profile picture associated with that user.
+Upon inputting the name of a Instagram user on the webpage, a call is made to the server to request the profile picture associated with that user. Since Instagram blocks too many API requests, the request is instead made through a third-party API using Puppeteer.
 
 A color palette is generated from the profile image. Each containing colors is broken down into R, G, and B values which are then put through an algorithm which filters and cross references words with similar R, G and B values in the data set. 
 
