@@ -17,7 +17,7 @@ Indiscernible characters within the color names were removed and phrases were se
 
 Upon inputting the name of a Instagram user on the webpage, a call is made to the server to request the profile picture associated with that user. Since Instagram blocks too many API requests, the request is instead made through a third-party API using Puppeteer.
 
-A color palette is generated from the profile image. Each containing colors is broken down into R, G, and B values which are then put through an algorithm which filters and cross references words with similar R, G and B values in the data set. 
+A color palette is generated from the recieved profile image. Each containing colors is broken down into R, G, and B values which are then put through an algorithm which filters and cross references adjectives with similar R, G and B values in the data set. 
 
 ## Setup
 
