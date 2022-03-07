@@ -28,10 +28,10 @@ A color palette is generated from the profile image. Each containing colors is b
 #### Execution
 
 * ``` npm start ```
-* Open http://localhost:5000
 
 #### Usage
 
+* Open http://localhost:5000
 * Enter your Instagram username
 * Get three adjectives based on the color palette of your profile picture
 
