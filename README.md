@@ -13,7 +13,7 @@ In producing this project, the goal was to encourage the users of the tool to co
 ## Methodology
 Website ColourLover's API was first used to obtain over 30,000 data entries in the form of a color represented by an RGB value and its corresponding user given title.
 
-Indiscernible characters within the titles were removed and phrases were separated into individual words and categorized by type (noun, verb, and adjective), resulting in a data set over 10,000 entries long.
+Indiscernible characters within the color names were removed and phrases were separated into individual words and categorized by type (noun, verb, and adjective), resulting in a data set over 10,000 entries long.
 
 Upon inputting the name of a Instagram user on the webpage, a call is made to the server to request the profile picture associated with that user. Since Instagram blocks too many API requests, the request is instead made through a third-party API using Puppeteer.
 
